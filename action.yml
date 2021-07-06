@@ -1,7 +1,7 @@
 name: "Delete Preview Environment"
 description: "Delete an Okteto Cloud preview environment"
 inputs:
-  namespace: 
+  name: 
     description: "The name of the preview environment to delete"
     required: true
 runs:
