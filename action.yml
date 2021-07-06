@@ -1,0 +1,14 @@
+name: "Delete Preview Environment"
+description: "Delete an Okteto Cloud preview environment"
+inputs:
+  namespace: 
+    description: "The name of the preview environment to delete"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.name }}
+branding:
+  color: 'green'
+  icon: 'grid'
