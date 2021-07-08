@@ -7,5 +7,11 @@ if [ -z $name ]; then
   exit 1
 fi
 
+if [[ ! -z "$OKTETO_CA_CERT" ]]; then
+   echo "Custom certificate is provided"
+   echo "$OKTETO_CA_CERT" > /usr/local/share/ca-certificates/okteto_ca_cert
+   update-ca-certificates
+fi
+
 echo running: okteto preview destroy $name
-okteto preview destroy $namespace
+okteto preview destroy $name
