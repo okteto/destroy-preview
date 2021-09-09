@@ -33,12 +33,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-    - uses: okteto/login@master
+    - uses: okteto/login@latest
       with:
         token: ${{ secrets.OKTETO_TOKEN }}
     
     - name: "Delete the previews preview environment"
-      uses: okteto/destroy-preview@master
+      uses: okteto/destroy-preview@latest
       with:
         name: dev-previews-cindylopez
 ```
@@ -65,12 +65,12 @@ jobs:
      env:
        OKTETO_CA_CERT: ${{ secrets.OKTETO_CA_CERT }}
      steps:
-     - uses: okteto/login@master
+     - uses: okteto/login@latest
        with:
          token: ${{ secrets.OKTETO_TOKEN }}
     
      - name: "Delete the previews preview environment"
-       uses: okteto/destroy-preview@master
+       uses: okteto/destroy-preview@latest
        with:
         name: dev-previews-cindylopez
 ```
