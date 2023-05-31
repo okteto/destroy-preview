@@ -5,7 +5,7 @@ inputs:
     description: "The name of the preview environment to delete"
     required: true
   file:
-    description: "The name of the okteto manifest file to use in the destroy operation"
+    description: "The name of the okteto manifest file to use in the destroy operation. This manifest needs to be in the root of the repository"
     required: false
 runs:
   using: "docker"
