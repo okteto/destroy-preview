@@ -15,6 +15,10 @@ You can use this action to delete a preview environment in Okteto as part of you
 
 **Required**  The name of the Okteto preview environment to delete.
 
+### `log-level`
+
+Log level used. Supported values are: `debug`, `info`, `warn`, `error`. (defaults to warn)
+
 ## Example usage
 
 This example runs the context action and then deletes a preview environment.
