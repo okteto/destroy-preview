@@ -15,6 +15,10 @@ You can use this action to delete a preview environment in Okteto as part of you
 
 **Required**  The name of the Okteto preview environment to delete.
 
+### `timeout`
+
+The length of time to wait for completion, zero means never. Any other values should contain a corresponding time unit e.g. 1s, 2m, 3h  (default 5m0s)
+
 ### `log-level`
 
 Log level used. Supported values are: `debug`, `info`, `warn`, `error`. (defaults to warn)
@@ -44,6 +48,7 @@ jobs:
       uses: okteto/destroy-preview@latest
       with:
         name: dev-previews-cindylopez
+        timeout: 10m
 ```
 
 

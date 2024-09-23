@@ -4,6 +4,9 @@ inputs:
   name: 
     description: "The name of the preview environment to delete"
     required: true
+  timeout:
+    description: "The length of time to wait for completion, zero means never. Any other values should contain a corresponding time unit e.g. 1s, 2m, 3h  (default 5m0s)"
+    required: false
   log-level:
     description: "Log level string. Valid options are debug, info, warn, error"
     required: false
@@ -12,6 +15,7 @@ runs:
   image: "Dockerfile"
   args:
     - ${{ inputs.name }}
+    - ${{ inputs.timeout }}
     - ${{ inputs.log-level }}
 branding:
   color: 'green'
